@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto';
+}
+
+.app-container {
+  background-image: linear-gradient(to bottom, #fbc7d4, #9796f0);
+  height: 100vh;
+  background-size: cover;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+/* linear-gradient(to bottom, #ffffff, #faeaee, #ffffff) */
+.appointment-section {
+  background-color: #ffffff;
+  width: 75%;
+  margin-top: 68px;
+  border-radius: 13px;
+  padding: 13px 24px;
+}
+
+.title {
+  font-size: 29px;
+  color: #171f46;
+  font-weight: 500;
+  font-family: 'Bree Serif';
+}
+.form-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 11px;
+}
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.appointments-image {
+  width: 35%;
+}
+.input-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #b5b7c4;
+  margin-bottom: 0;
+}
