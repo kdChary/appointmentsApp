@@ -1,1 +1,57 @@
-/* Write your CSS here */
+.appointment-item {
+  padding: 11px;
+  border-radius: 13px;
+  border: solid 1.7px #b5b7c4;
+  width: 230px;
+  box-shadow: 0 0 2px #b5b7c4;
+  margin: 5px 11px;
+}
+
+.upper-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.appointment-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #171f46;
+  font-family: 'Bree Serif';
+  margin: 0;
+}
+
+.star {
+  border: none 0 transparent;
+  background-color: transparent;
+}
+
+.date {
+  font-size: 13px;
+  font-weight: 500;
+  color: #b5b7c4;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .appointment-item {
+    margin-bottom: 5px;
+  }
+  .upper-section {
+    padding: 0;
+  }
+  .date {
+    margin: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .date {
+    font-size: 17px;
+  }
+
+  .appointment-name {
+    font-size: 17px;
+  }
+}

@@ -1,4 +1,4 @@
-import {format} from 'date-fns'
+import {format, isValid} from 'date-fns'
 
 import './index.css'
 
@@ -16,13 +16,23 @@ const AppointmentItem = props => {
     toggleStar(id)
   }
 
-  const appointmentDate = format(new Date(date), 'dd MMMM yyyy, EEEE')
+  let appointmentDate
+  if (isValid(new Date(date))) {
+    appointmentDate = format(new Date(date), 'dd MMMM yyyy, EEEE')
+  } else {
+    appointmentDate = format(new Date(), 'dd MMMM yyyy, EEEE')
+  }
 
   return (
     <li className="appointment-item">
       <div className="upper-section">
         <p className="appointment-name">{name}</p>
-        <button className="star-button" type="button" onClick={starClicked}>
+        <button
+          className="star"
+          type="button"
+          data-testid="star"
+          onClick={starClicked}
+        >
           <img src={imageUrl} alt="star" />
         </button>
       </div>

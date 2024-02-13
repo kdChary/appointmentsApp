@@ -52,6 +52,7 @@ class Appointments extends Component {
     this.setState({
       appointmentList: [...appointmentList, newAppointmentList],
       appointmentName: '',
+      appointmentDate: '',
     })
   }
 
@@ -81,24 +82,29 @@ class Appointments extends Component {
               onSubmit={this.onSubmit}
             >
               <div>
-                <p className="input-label">TITLE</p>
-                <input
-                  className="input"
-                  type="text"
-                  value={appointmentName}
-                  onChange={this.onChangeName}
-                />
+                <label className="input-label">
+                  TITLE
+                  <input
+                    className="input"
+                    placeholder="TITLE"
+                    type="text"
+                    value={appointmentName}
+                    onChange={this.onChangeName}
+                  />
+                </label>
               </div>
               {/* className="input-label" */}
-              <label>
-                DATE
-                <input
-                  type="date"
-                  className="input"
-                  value={appointmentDate}
-                  onChange={this.onChangeDate}
-                />
-              </label>
+              <div>
+                <label className="input-label">
+                  DATE
+                  <input
+                    type="date"
+                    className="input"
+                    value={appointmentDate}
+                    onChange={this.onChangeDate}
+                  />
+                </label>
+              </div>
               <button className="form-button" type="submit">
                 Add
               </button>
@@ -111,7 +117,7 @@ class Appointments extends Component {
           </div>
           <hr className="line" />
           <div className="appointments-card">
-            <p className="lower-title">Appointments</p>
+            <h3 className="lower-title">Appointments</h3>
             <button
               className="star-button"
               type="button"
